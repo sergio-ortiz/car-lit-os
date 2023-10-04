@@ -8,6 +8,7 @@ import detailImage3 from '../assets/detail3.jpg';
 import detailImage4 from '../assets/detail4.jpg';
 import detailImage5 from '../assets/detail5.jpg';
 const heroImage = await getImage({src: detailImage5, format: 'webp'});
+const pageTitle = "Car Lit O's"
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ const heroImage = await getImage({src: detailImage5, format: 'webp'});
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Car Lit O's</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<div class="hero" data-theme="dark" style={`background-image: url(${heroImage.src});`}>
@@ -24,7 +25,7 @@ const heroImage = await getImage({src: detailImage5, format: 'webp'});
         <ul>
           <li>
             <a href="./" class="contrast" onclick="event.preventDefault()"
-              ><strong>Car Lit O's</strong></a
+              ><strong>{pageTitle}</strong></a
             >
           </li>
         </ul>
@@ -39,16 +40,16 @@ const heroImage = await getImage({src: detailImage5, format: 'webp'});
               </ul>
             </details>
           </li>
-          <li><a href="#" class="contrast">Pricing</a></li>
-          <li><a href="#" class="contrast">Contact</a></li>
+          <li><a href="#contact" class="contrast">Pricing</a></li>
+          <li><a href="#contact" class="contrast">Contact</a></li>
         </ul>
       </nav>
       <header class="container">
         <hgroup>
-          <h1>Car Lit O's</h1>
-          <h2>A classic company or blog layout with a sidebar</h2>
+          <h1>{pageTitle}</h1>
+          <h2>Professional, family-friendly auto detailing</h2>
         </hgroup>
-        <p><a href="#" role="button" onclick="event.preventDefault()">Call to action</a></p>
+        <p><a href="#contact" role="button">Get a quote</a></p>
       </header>
     </div>
     <!-- ./ Hero -->
@@ -129,10 +130,10 @@ const heroImage = await getImage({src: detailImage5, format: 'webp'});
       <div class="container">
         <article>
           <hgroup>
-            <h2>Subscribe</h2>
+            <h2>Contact</h2>
             <h3>Litora torquent per conubia nostra</h3>
           </hgroup>
-          <form class="grid">
+          <form id="contact" class="grid" name="contact" method="POST" data-netlify="true">
             <input
               type="text"
               id="firstname"
@@ -149,7 +150,7 @@ const heroImage = await getImage({src: detailImage5, format: 'webp'});
               aria-label="Email address"
               required
             />
-            <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+            <button type="submit">Send</button>
           </form>
         </article>
       </div>
