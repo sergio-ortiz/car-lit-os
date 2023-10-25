@@ -12,5 +12,9 @@
   "dependencies": {
     "@picocss/pico": "^1.5.10",
     "astro": "^3.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1"
   }
 }
